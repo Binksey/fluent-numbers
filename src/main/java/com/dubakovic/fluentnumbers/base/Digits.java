@@ -1,4 +1,4 @@
-package com.dubakovic.fluentnumbers;
+package com.dubakovic.fluentnumbers.base;
 
 /** Constants for number digits. */
 final class Digits {

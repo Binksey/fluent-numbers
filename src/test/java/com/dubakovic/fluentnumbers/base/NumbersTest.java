@@ -1,4 +1,4 @@
-package com.dubakovic.fluentnumbers;
+package com.dubakovic.fluentnumbers.base;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

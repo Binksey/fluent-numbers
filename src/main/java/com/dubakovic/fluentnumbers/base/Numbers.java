@@ -1,4 +1,4 @@
-package com.dubakovic.fluentnumbers;
+package com.dubakovic.fluentnumbers.base;
 
 import java.util.ArrayList;
 import java.util.Collections;
