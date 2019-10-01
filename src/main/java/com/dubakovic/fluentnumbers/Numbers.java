@@ -8,8 +8,6 @@ import java.util.stream.Collectors;
 
 /** Builder for a number. */
 public final class Numbers {
-  private static final byte INITIAL_VALUE = 0;
-
   private final List<Byte> values;
 
   /**
@@ -27,7 +25,7 @@ public final class Numbers {
    * @return new, empty builder
    */
   public static Numbers builder() {
-    return new Numbers(new ArrayList<>(Collections.singleton(INITIAL_VALUE)));
+    return new Numbers(new ArrayList<>(Collections.singleton(Digits.ZERO)));
   }
 
   /**
