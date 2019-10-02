@@ -1,31 +1,44 @@
 package com.dubakovic.fluentnumbers.base;
 
+import static java.util.Objects.requireNonNull;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 /** Builder for a number. */
 public final class Numbers {
+  private final Sign sign;
   private final List<Byte> values;
 
   /**
    * Constructor.
    *
+   * @param sign number sign (positive, or negative)
    * @param values list of digits
    */
-  private Numbers(List<Byte> values) {
-    this.values = Objects.requireNonNull(values);
+  private Numbers(Sign sign, List<Byte> values) {
+    this.sign = requireNonNull(sign);
+    this.values = requireNonNull(values);
   }
 
   /**
-   * Creates new builder with no digits.
+   * Creates new builder for a positive number with 0 as a current value.
    *
-   * @return new, empty builder
+   * @return new builder for a positive number
    */
-  public static Numbers builder() {
-    return new Numbers(new ArrayList<>(Collections.singleton(Digits.ZERO)));
+  public static Numbers positive() {
+    return new Numbers(Sign.POSITIVE, new ArrayList<>(Collections.singletonList(Digits.ZERO)));
+  }
+
+  /**
+   * Creates new builder for a negative number with 0 as a current value.
+   *
+   * @return new builder for a negative number
+   */
+  public static Numbers negative() {
+    return new Numbers(Sign.NEGATIVE, new ArrayList<>(Collections.singletonList(Digits.ZERO)));
   }
 
   /**
@@ -129,12 +142,14 @@ public final class Numbers {
   }
 
   /**
-   * Build the final number.
+   * Creates the final number.
    *
    * @return final number
+   * @throws NumberFormatException in case the final number exceeds the limits of long type
    */
-  public long build() {
-    return Long.parseLong(values.stream().map(String::valueOf).collect(Collectors.joining("")));
+  public long create() {
+    return Long.parseLong(
+        sign.getValue() + values.stream().map(String::valueOf).collect(Collectors.joining("")));
   }
 
   @Override
