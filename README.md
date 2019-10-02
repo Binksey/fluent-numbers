@@ -13,7 +13,7 @@ long value = 1964;
 
 The exciting way!
 ```
-long value = Numbers.builder().one().nine().six().four().build();
+long value = Numbers.positive().one().nine().six().four().create();
 ```
 
 ### Requirements
@@ -22,6 +22,5 @@ Java 8 or higher
 
 ### The future
 
-- Negative numbers
 - Basic arithmetic operations
 - And more!
