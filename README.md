@@ -1,8 +1,7 @@
 # Fluent numbers
 
-Tired of plain, old numbers in you code?  
-Hate the way your IDE highlights numbers and want them go away?  
-Ever dreamt of writing several lines of code instead of few numbers?  
+Tired of plain numbers in you code?  
+Ever dreamt of writing several lines of code instead of few characters?  
 
 ### How does it work?
 
