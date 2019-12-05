@@ -1,7 +1,7 @@
 # Fluent numbers
 
 Tired of plain numbers in you code?  
-Ever dreamt of writing several lines of code instead of few characters?  
+Ever dreamt of writing several lines of code instead of few digits?  
 
 ### How does it work?
 
