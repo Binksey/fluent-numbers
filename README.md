@@ -22,4 +22,5 @@ Java 8 or higher
 ### The future
 
 - Basic arithmetic operations
+- Push into Maven repository
 - And more!
