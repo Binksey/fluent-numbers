@@ -2,6 +2,7 @@
 
 Tired of plain numbers in you code?  
 Ever dreamt of writing several lines of code instead of few digits?  
+I got your back!
 
 ### How does it work?
 
@@ -22,5 +23,5 @@ Java 8 or higher
 ### The future
 
 - Basic arithmetic operations
-- Push into Maven repository
+- Maven support
 - And more!
