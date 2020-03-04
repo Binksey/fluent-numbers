@@ -8,12 +8,12 @@ I got your back!
 
 The boring way :'(
 ```
-long value = 1964;
+long value = 1984;
 ```
 
 The exciting way!
 ```
-long value = Numbers.positive().one().nine().six().four().create();
+long value = Numbers.positive().one().nine().eight().four().create();
 ```
 
 ### Requirements
